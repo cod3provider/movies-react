@@ -5,6 +5,7 @@ import MoviesList from "../../components/MoviesList/MoviesList.jsx";
 import s from './Home.module.css';
 
 import {getTrendingMovies} from "../../utils/api.js";
+import Container from "../../components/Container/index.js";
 
 const Home = () => {
     const [trendingMovies, setTrendingMovies] = useState([]);
@@ -25,8 +26,10 @@ const Home = () => {
 
     return (
         <div className={s.wrapper}>
-            <h1 className={s.title}>Trending today</h1>
-            <MoviesList movies={trendingMovies} />
+            <Container>
+                <h1 className={s.title}>Trending today</h1>
+                <MoviesList movies={trendingMovies} />
+            </Container>
         </div>
     )
 }

@@ -8,6 +8,7 @@ import MoviesList from '../../components/MoviesList/MoviesList';
 import s from './Movies.module.css';
 
 import {searchMovies} from "../../utils/api.js";
+import Container from "../../components/Container/index.js";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -48,7 +49,7 @@ const Movies = () => {
   }, [movieSearch]);
 
   return (
-    <div>
+    <Container>
       <form onSubmit={handleSubmit}>
         <input className={s.input} type='text' value={query} onChange={handleChange} />
         <button className={s.button} type="submit">Search</button>
@@ -67,7 +68,7 @@ const Movies = () => {
         pauseOnHover
         theme="colored"
       />
-    </div>
+    </Container>
   )
 }
 

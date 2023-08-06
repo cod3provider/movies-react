@@ -6,6 +6,7 @@ import MovieInfo from '../../components/MovieInfo/MovieInfo';
 import s from './MovieDetails.module.css';
 
 import {getMovieDetails} from "../../utils/api.js";
+import Container from "../../components/Container/index.js";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
@@ -22,7 +23,7 @@ const MovieDetails = () => {
   const from = location.state?.from ?? '/';
 
   return (
-    <div>
+    <Container>
       {movie && (
         <div className={s.wrapper}>
           <Link className={s.backButton} to={from}>Go back</Link>
@@ -47,7 +48,7 @@ const MovieDetails = () => {
         </div>
         )
       }
-    </div>
+    </Container>
   )
 }
 

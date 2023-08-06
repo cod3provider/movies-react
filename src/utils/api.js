@@ -6,6 +6,8 @@ axios.defaults.params = {
     language: 'en-US',
 }
 
+export const POSTER_URL = 'https://image.tmdb.org/t/p/w500';
+
 export const getTrendingMovies = async () => {
     const response = await axios.get('/trending/movie/day');
     return response.data.results;
