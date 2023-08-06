@@ -1,0 +1,40 @@
+/*.list {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*    gap: 48px 24px;*/
+/*}*/
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item {
+
+}
+
+.image {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.title, .text {
+    font-size: 18px;
+    margin: 0;
+}
+
+.thumb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*align-content: space-between;*/
+    gap: 12px;
+    padding: 10px;
+    background: #e1ecde;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

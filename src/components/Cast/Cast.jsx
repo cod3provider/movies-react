@@ -5,6 +5,8 @@ import NoImage from '../NoImage/NoImage.jpg';
 
 import {getMovieCast} from "../../utils/api.js";
 
+import s from './Cast.module.css'
+
 const Cast = () => {
   const [cast, setCast] = useState([]);
   const { movieId } = useParams();
@@ -22,20 +24,23 @@ const Cast = () => {
   }
 
   const castItem = cast.map(({ id, profile_path, name, character }) => (
-    <li key={id}>
+    <li className={s.item} key={id}>
       <img
         src={profile_path ? `${baseURL}${profile_path}` : NoImage}
         alt=''
         width="200"
+        className={s.image}
       />
-      <p>{name}</p>
-      <p>Character: {character}</p>
+      <div className={s.thumb}>
+          <p className={s.title}>{name}</p>
+          <p className={s.text}>Character: {character}</p>
+      </div>
     </li>
   ))
 
   return (
     <div>
-      <ul>
+      <ul className={s.list}>
         {castItem}
       </ul>
     </div>

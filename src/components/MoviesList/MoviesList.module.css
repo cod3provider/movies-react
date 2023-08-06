@@ -14,7 +14,7 @@
 }
 
 .item:hover {
-  box-shadow: 0px 7px 22px 5px rgba(0,0,0,0.49);
+  box-shadow: 0 7px 22px 5px rgba(0,0,0,0.49);
   transform: scale(1.05);
 }
 
