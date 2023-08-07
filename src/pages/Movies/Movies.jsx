@@ -7,7 +7,7 @@ import MoviesList from '../../components/MoviesList/MoviesList';
 
 import s from './Movies.module.css';
 
-import {searchMovies} from "../../utils/api.js";
+import {searchMovies} from "../../utils/films.js";
 import Container from "../../components/Container/index.js";
 
 const Movies = () => {

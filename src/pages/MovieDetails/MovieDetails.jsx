@@ -5,7 +5,7 @@ import MovieInfo from '../../components/MovieInfo/MovieInfo';
 
 import s from './MovieDetails.module.css';
 
-import {getMovieDetails} from "../../utils/api.js";
+import {getMovieDetails} from "../../utils/films.js";
 import Container from "../../components/Container/index.js";
 
 const MovieDetails = () => {

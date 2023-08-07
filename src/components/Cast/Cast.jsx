@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import NoImage from '../NoImage/NoImage.jpg';
 
-import {getMovieCast} from "../../utils/api.js";
+import {getMovieCast} from "../../utils/films.js";
 
 import s from './Cast.module.css'
 

@@ -1,34 +1,20 @@
 import axios from 'axios';
+const API_KEY = '86b2774f72e9923bd0f07dfe6f4fea8a';
+const LANGUAGE = 'en-US';
 
-axios.defaults.baseURL = 'https://api.themoviedb.org/3';
-axios.defaults.params = {
-    api_key: '86b2774f72e9923bd0f07dfe6f4fea8a',
-    language: 'en-US',
-}
+const moviesInstance = axios.create({
+    baseURL: 'https://api.themoviedb.org/3',
+    params: {
+        api_key: API_KEY,
+        language: LANGUAGE,
+    }
+});
 
-export const POSTER_URL = 'https://image.tmdb.org/t/p/w500';
+export default moviesInstance;
 
-export const getTrendingMovies = async () => {
-    const response = await axios.get('/trending/movie/day');
-    return response.data.results;
-}
 
-export const searchMovies = async query => {
-    const response = await axios.get(`/search/movie?query=${query}`);
-    return response.data.results;
-}
-
-export const getMovieDetails = async movieId => {
-    const response = await axios.get(`/movie/${movieId}`);
-    return response.data;
-}
-
-export const getMovieCast = async movieId => {
-    const response = await axios.get(`/movie/${movieId}/credits`);
-    return response.data.cast;
-}
-
-export const getMoviesReviews = async movieId => {
-    const response = await axios.get(`/movie/${movieId}/reviews`);
-    return response.data.results;
-}
+// axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+// axios.defaults.params = {
+//     api_key: '86b2774f72e9923bd0f07dfe6f4fea8a',
+//     language: 'en-US',
+// }

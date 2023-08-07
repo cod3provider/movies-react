@@ -4,7 +4,7 @@ import MoviesList from "../../components/MoviesList/MoviesList.jsx";
 
 import s from './Home.module.css';
 
-import {getTrendingMovies} from "../../utils/api.js";
+import {getTrendingMovies} from "../../utils/films.js";
 import Container from "../../components/Container/index.js";
 
 const Home = () => {
