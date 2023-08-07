@@ -1,7 +1,7 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 
-import MovieInfo from '../../components/MovieInfo/MovieInfo';
+import MovieInfo from '../../components/MovieInfo/index.js';
 
 import s from './MovieDetails.module.css';
 

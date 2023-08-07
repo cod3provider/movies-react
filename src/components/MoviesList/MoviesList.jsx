@@ -9,13 +9,28 @@ const MoviesList = ({movies}) => {
     const location = useLocation();
 
     const elements = movies.map(({id, poster_path, original_title, original_name}) =>
-        <li className={s.item} key={id}>
-            <Link className={s.link} to={`/movies/${id}`} state={{from: location}}>{<img className={s.img}
-                src={poster_path ? `${POSTER_URL}${poster_path}` : NoImage} alt="film's poster"/>}</Link>
-            {original_name ? (<p className={s.overlay}>{original_name}</p>) : (<p className={s.overlay}>{original_title}</p>)}
-        </li>
+            <li className={s.item} key={id}>
+                {original_title
+                    ?
+                    (<>
+                        <Link className={s.link} to={`/movies/${id}`} state={{from: location}}>
+                            <img className={s.img}
+                                  src={poster_path ? `${POSTER_URL}${poster_path}` : NoImage}
+                                  alt="film's poster"/>
+                        </Link>
+                        <p className={s.overlay}>{original_name}</p>
+                    </>)
+                    :
+                    (<>
+                        <Link className={s.link} to={`/series/${id}`} state={{from: location}}>
+                            {<img className={s.img}
+                              src={poster_path ? `${POSTER_URL}${poster_path}` : NoImage}
+                              alt="film's poster"/>}
+                        </Link>
+                        <p className={s.overlay}>{original_name}</p>
+                    </>)}
+            < /li>
     )
-
 
     return (
         <ul className={s.list}>

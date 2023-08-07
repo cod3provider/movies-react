@@ -2,12 +2,12 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 import SharedLayout from './components/SharedLayout';
 import './App.css';
-import TvSeries from "./pages/TvSeries/index.js";
-import SeriesDetails from "./pages/SeriesDetails/SeriesDetails.jsx";
 
 const Home = lazy(() => import('./pages/Home/Home.jsx')) ;
 const Movies = lazy(() => import('./pages/Movies/Movies.jsx'));
+const TvSeries = lazy(() => import('./pages/TvSeries/index.js'));
 const MovieDetails = lazy(() => import('./pages/MovieDetails/MovieDetails.jsx'));
+const SeriesDetails = lazy(() => import('./pages/SeriesDetails/SeriesDetails.jsx'));
 const Cast = lazy(() => import('./components/Cast/Cast.jsx'));
 const Reviews = lazy(() => import('./components/Reviews/Reviews.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound.jsx'));
