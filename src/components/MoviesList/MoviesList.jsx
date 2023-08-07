@@ -18,7 +18,7 @@ const MoviesList = ({movies}) => {
                                   src={poster_path ? `${POSTER_URL}${poster_path}` : NoImage}
                                   alt="film's poster"/>
                         </Link>
-                        <p className={s.overlay}>{original_name}</p>
+                        <p className={s.overlay}>{original_title}</p>
                     </>)
                     :
                     (<>
