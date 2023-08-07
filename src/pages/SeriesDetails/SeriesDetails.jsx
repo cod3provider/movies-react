@@ -29,9 +29,9 @@ const SeriesDetails = () => {
                     <Link className={s.backButton} to={from}>Go back</Link>
                     <SeriesInfo info={series} />
                     <div className={s.infoWrap}>
-                        <div>
-                            <p >Additional information</p>
-                            <ul>
+                        <div className={s.linksWrap}>
+                            <p className={s.title}>Additional information</p>
+                            <ul className={s.list}>
                                 <li>
                                     <Link className={s.link} to="cast" state={{ from }}>Cast</Link>
                                 </li>

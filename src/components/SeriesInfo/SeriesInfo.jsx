@@ -1,4 +1,4 @@
-import s from '../SeriesInfo/SeriesInfo.module.css';
+import s from '../MovieInfo/MovieInfo.module.css';
 
 import NoImage from '../NoImage/NoImage.jpg';
 

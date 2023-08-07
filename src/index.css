@@ -23,8 +23,11 @@ html, body {
   /*  background: rgb(210,162,192);*/
   /*  background: linear-gradient(0deg, rgba(210,162,192,1) 0%, rgba(74,16,64,1) 100%);*/
 
-    background: rgb(106,204,250);
-    background: linear-gradient(0deg, rgb(164, 217, 241) 0%, rgb(54, 74, 105) 100%);
+    /*background: rgb(106,204,250);*/
+    /*background: linear-gradient(0deg, rgb(164, 217, 241) 0%, rgb(54, 74, 105) 100%);*/
+
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(25,14,69,1) 100%);
 }
 
 /*h1 {*/

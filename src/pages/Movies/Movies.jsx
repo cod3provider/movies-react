@@ -50,7 +50,7 @@ const Movies = () => {
 
   return (
     <Container>
-      <form onSubmit={handleSubmit}>
+      <form className={s.form} onSubmit={handleSubmit}>
         <input className={s.input} type='text' value={query} onChange={handleChange} />
         <button className={s.button} type="submit">Search</button>
       </form>

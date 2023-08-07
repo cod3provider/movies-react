@@ -1,5 +1,6 @@
 .wrapper {
   padding: 20px 15px;
+  /*margin-bottom: 50px;*/
 }
 
 .backButton {
@@ -19,7 +20,23 @@
 }
 
 .infoWrap {
-  margin-top: 25px;
+  margin-top: 70px;
+}
+
+.linksWrap {
+  margin-bottom: 36px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.title {
+  font-size: 28px;
+  color: #cbd6e0;
 }
 
 .link {

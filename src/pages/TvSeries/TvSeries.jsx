@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import MoviesList from '../../components/MoviesList/MoviesList';
 
-import s from './TvSeries.module.css';
+import s from '../Movies/Movies.module.css';
 
 import {searchSeries} from "../../utils/series.js";
 import Container from "../../components/Container/index.js";
@@ -50,8 +50,8 @@ const TvSeries = () => {
 
     return (
         <Container>
-            <form onSubmit={handleSubmit}>
-                <input className={s.input} type='text' value={query} onChange={handleChange}/>
+            <form className={s.form} onSubmit={handleSubmit}>
+                <input className={s.input} type='text' value={query} onChange={handleChange} />
                 <button className={s.button} type="submit">Search</button>
             </form>
 

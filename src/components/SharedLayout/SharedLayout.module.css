@@ -17,14 +17,16 @@
     color: #f3f2f2;
     text-decoration: none;
     font-weight: 300;
-    border: 1px solid #6a6d77;
+    border: 1px solid #3a3939;
     border-radius: 20px;
 
-    transition: color 350ms linear;
+    transition: color 350ms linear,
+    background-color 350ms linear;
 }
 
 .link:hover {
-    color: #4f8849;
+    color: #bbba65;
+    background-color: #2b2c2c;
 }
 
 .link:global(.active) {
@@ -36,5 +38,5 @@
 }
 
 .link:global(.active):hover {
-    color: #4f8849;
+    color: #c7fac3;
 }

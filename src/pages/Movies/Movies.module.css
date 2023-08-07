@@ -1,9 +1,23 @@
+.form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .input {
-  margin-top: 20px;
-  padding: 7px;
+  /*margin-top: 20px;*/
+  padding: 10px 20px;
   width: 350px;
   border-radius: 10px;
-  border: 1px solid olivedrab;
+  border: 2px solid #3a3939;
+  border-radius: 20px;
+  background: #1a1336;
+  color: #cbd6e0;
+  transition: border 350ms linear;
+  outline: none;
+}
+
+input:focus, input:active {
+  border: 2px solid #a6a4a4;
 }
 
 .button {
