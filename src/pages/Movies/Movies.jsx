@@ -4,7 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import MoviesList from '../../components/MoviesList/MoviesList';
-
+import { FiSearch } from "react-icons/fi";
+// import findIcon from '../../assets/search.svg';
 import s from './Movies.module.css';
 
 import {searchMovies} from "../../utils/films.js";
@@ -51,8 +52,11 @@ const Movies = () => {
   return (
     <Container>
       <form className={s.form} onSubmit={handleSubmit}>
-        <input className={s.input} type='text' value={query} onChange={handleChange} />
-        <button className={s.button} type="submit">Search</button>
+        <input className={s.input} type='text' value={query} onChange={handleChange} placeholder="Enter the movie title" />
+        <button type="submit" className={s.button}>
+          <span className={s.buttonLabel}>Search</span>
+          <FiSearch className={s.icon} />
+        </button>
       </form>
 
       {movies && <MoviesList movies={movies} />}

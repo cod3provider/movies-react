@@ -3,6 +3,8 @@ import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 
 import SeriesInfo from "../../components/SeriesInfo/index.js";
 
+import { MdOutlineArrowBack } from "react-icons/md";
+
 import s from '../MovieDetails/MovieDetails.module.css';
 
 import Container from "../../components/Container/index.js";
@@ -26,7 +28,7 @@ const SeriesDetails = () => {
         <Container>
             {series && (
                 <div className={s.wrapper}>
-                    <Link className={s.backButton} to={from}>Go back</Link>
+                    <Link className={s.backButton} to={from}> <MdOutlineArrowBack className={s.icon} /> Go back</Link>
                     <SeriesInfo info={series} />
                     <div className={s.infoWrap}>
                         <div className={s.linksWrap}>

@@ -4,19 +4,31 @@
 }
 
 .backButton {
-  padding: 5px 15px;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 200px;
+  padding: 10px 20px;
+  font-size: 18px;
   font-weight: 500;
   color: #242d31;
   text-decoration: none;
-  border: 2px solid black;
   border-radius: 10px;
+  color: #cbd6e0;
+  border: 2px solid #cbd6e0;
 
   transition: background 350ms linear;
 }
 
 .backButton:hover {
   background: #cbd6e0;
+  color: #150c3c;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
 }
 
 .infoWrap {

@@ -3,7 +3,7 @@ import {Link, useLocation} from 'react-router-dom';
 import s from './MoviesList.module.css';
 import {POSTER_URL} from "../../utils/films.js";
 
-import NoImage from '../NoImage/No-Image-Placeholder.svg.jpg';
+import NoImage from '../NoImage/placeholder-no-image.jpg';
 
 const MoviesList = ({movies}) => {
     const location = useLocation();

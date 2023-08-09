@@ -1,6 +1,8 @@
 import {useState, useEffect, Suspense} from 'react';
 import {useParams, useLocation, Link, Outlet} from 'react-router-dom';
 
+import { MdOutlineArrowBack } from "react-icons/md";
+
 import MovieInfo from '../../components/MovieInfo/index.js';
 
 import s from './MovieDetails.module.css';
@@ -26,7 +28,7 @@ const MovieDetails = () => {
         <Container>
             {movie && (
                 <div className={s.wrapper}>
-                    <Link className={s.backButton} to={from}>Go back</Link>
+                    <Link className={s.backButton} to={from}> <MdOutlineArrowBack className={s.icon} /> Go back</Link>
                     <MovieInfo info={movie}/>
                     <div className={s.infoWrap}>
                         <div className={s.linksWrap}>

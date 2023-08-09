@@ -9,6 +9,7 @@ import s from '../Movies/Movies.module.css';
 
 import {searchSeries} from "../../utils/series.js";
 import Container from "../../components/Container/index.js";
+import {FiSearch} from "react-icons/fi";
 
 const TvSeries = () => {
     const [series, setSeries] = useState([]);
@@ -51,8 +52,11 @@ const TvSeries = () => {
     return (
         <Container>
             <form className={s.form} onSubmit={handleSubmit}>
-                <input className={s.input} type='text' value={query} onChange={handleChange} />
-                <button className={s.button} type="submit">Search</button>
+                <input className={s.input} type='text' value={query} onChange={handleChange} placeholder="Enter show title" />
+                <button type="submit" className={s.button}>
+                    <span className={s.buttonLabel}>Search</span>
+                    <FiSearch className={s.icon} />
+                </button>
             </form>
 
             {series && <MoviesList movies={series}/>}
