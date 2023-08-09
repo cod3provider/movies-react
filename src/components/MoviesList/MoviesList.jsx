@@ -3,7 +3,7 @@ import {Link, useLocation} from 'react-router-dom';
 import s from './MoviesList.module.css';
 import {POSTER_URL} from "../../utils/api.js";
 
-import NoImage from '../NoImage/No-Image-Placeholder.svg.jpg';
+import NoImage from '../NoImage/NoImage.jpg';
 
 const MoviesList = ({movies}) => {
     const location = useLocation();
@@ -15,7 +15,6 @@ const MoviesList = ({movies}) => {
             <p className={s.overlay}>{original_title}</p>
         </li>
     )
-
 
     return (
         <ul className={s.list}>
