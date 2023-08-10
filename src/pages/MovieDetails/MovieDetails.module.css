@@ -1,6 +1,5 @@
 .wrapper {
   padding: 20px 15px;
-  /*margin-bottom: 50px;*/
 }
 
 .backButton {
@@ -35,7 +34,6 @@
 }
 
 .linksWrap {
-  /*margin-bottom: 36px;*/
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -49,7 +47,6 @@
 }
 
 .title {
-  /*margin-bottom: 24px;*/
   font-size: 22px;
   color: #cbd6e0;
 
