@@ -2,36 +2,101 @@
     font-size: 25px;
 }
 
+@media (width <= 480px) {
+    .nav {
+        gap: 12px;
+    }
+
+    .link {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
 .nav {
+    @media (width <= 480px) {
+        gap: 12px;
+    }
+
+    display: flex;
+    justify-content: center;
+    gap: 24px;
     padding: 30px 50px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
 }
 
 .link {
-    padding: 20px 0;
+    @media (width <= 480px) {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 
-    color: #000;
+    font-size: 24px;
+    color: rgb(82, 54, 73);
+    display: inline-block;
+    cursor: pointer;
     text-decoration: none;
-    font-weight: 300;
-
-    transition: color 350ms linear;
+    border: 2px rgb(111, 101, 245) solid;
+    padding: 20px 40px;
+    border-radius: 20px;
+    position: relative;
+    transition: color 250ms linear, text-shadow 250ms linear, box-shadow 250ms linear;
 }
 
-.link:hover {
-    color: #4f8849;
-}
-
-.link:not(:last-child) {
-    margin-right: 20px;
+.link:hover,
+.link:focus {
+    color: rgb(232, 230, 130);;
+    text-shadow: none;
+    box-shadow: inset 0 0 0.5em 0 rgb(36, 20, 255), 0 0 0.5em 0 rgb(71, 20, 255);
 }
 
 .link:global(.active) {
-    color: #06739f;
-    font-weight: 700;
-
-    transition: color 350ms linear;
+    color: rgb(196, 255, 20);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 rgb(28, 20, 255), 0 0 0.5em 0 rgb(71, 20, 255);
 }
 
-.link:global(.active):hover {
-    color: #4f8849;
+.link:global(.active)::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: rgb(106, 20, 255);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.link:global(.active)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em rgb(63, 20, 255);
+    opacity: 0;
+    background-color: rgb(79, 20, 255);
+    z-index: -1;
+    transition: opacity 250ms linear;
+}
+
+.link:hover::before,
+.link:focus::before {
+    opacity: 1;
+}
+.link:hover::after,
+.link:focus::after {
+    opacity: 1;
+}
+
+.fallback {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 48px;
+    color: #cbd6e0;
 }

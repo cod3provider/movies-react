@@ -9,8 +9,9 @@ const SharedLayout = () => {
             <nav className={s.nav}>
                 <NavLink className={s.link} to="/">Home</NavLink>
                 <NavLink className={s.link} to="/movies">Movies</NavLink>
+                <NavLink className={s.link} to="/series">Series</NavLink>
             </nav>
-            <Suspense fallback={<div>...Loading</div>}>
+            <Suspense fallback={<div className={s.fallback}>...Loading</div>}>
                 <Outlet />
             </Suspense>
         </header>

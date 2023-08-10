@@ -1,34 +1,62 @@
-
-
+.form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 3px;
+  overflow: hidden;
+}
 
 .input {
-  margin-top: 20px;
-  padding: 7px;
-  width: 350px;
+  padding: 10px 20px 10px 45px;
+  width: 100%;
   border-radius: 10px;
-  border: 1px solid olivedrab;
+  border: 2px solid #3a3939;
+  border-radius: 20px;
+  background: #1a1336;
+  color: #cbd6e0;
+  transition: border 350ms linear;
+  outline: none;
+}
+
+input:focus, input:active {
+  border: 2px solid #a6a4a4;
 }
 
 .button {
-  padding: 5px 15px;
-  height: 30px;
-
-  font-size: 16px;
-
-  background: #6fb0e3;
-  border: none;
-  border-radius: 10px;
-
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  opacity: 0.6;
+  transition: opacity 250ms linear;
   cursor: pointer;
+  outline: none;
+  background: none;
 
-  transition: all 350ms linear;
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.button:hover {
-  background-color: rgba(106, 203, 220, 0.71);
-  color: rgba(52, 50, 50, 0.58);
+.buttonLabel {
+  /*position: absolute;*/
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
 }
 
-.button:active {
-  box-shadow: rgba(37, 37, 58, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+.icon {
+  color: #cbd6e0;
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import NoImage from '../NoImage/NoImage.jpg';
+import NoImage from '../NoImage/placeholder-no-image.jpg';
 
-import {getMovieCast} from "../../utils/api.js";
+import {getMovieCast} from "../../utils/films.js";
 
 import s from './Cast.module.css'
 
@@ -20,7 +20,7 @@ const Cast = () => {
   }, [movieId]);
 
   if (cast.length === 0) {
-    return "We don't have any cast information on this movie."
+    return <p className={s.noInfo}>We don't have any cast information on this movie.</p>
   }
 
   const castItem = cast.map(({ id, profile_path, name, character }) => (
@@ -31,7 +31,7 @@ const Cast = () => {
         width="200"
         className={s.image}
       />
-      <div className={s.thumb}>
+      <div className={s.overlay}>
           <p className={s.title}>{name}</p>
           <p className={s.text}>Character: {character}</p>
       </div>
