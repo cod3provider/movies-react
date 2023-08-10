@@ -2,7 +2,22 @@
     font-size: 25px;
 }
 
+@media (width <= 480px) {
+    .nav {
+        gap: 12px;
+    }
+
+    .link {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
 .nav {
+    @media (width <= 480px) {
+        gap: 12px;
+    }
+
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -11,6 +26,11 @@
 }
 
 .link {
+    @media (width <= 480px) {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
     font-size: 24px;
     color: rgb(82, 54, 73);
     display: inline-block;
@@ -72,4 +92,11 @@
 .link:hover::after,
 .link:focus::after {
     opacity: 1;
+}
+
+.fallback {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 48px;
+    color: #cbd6e0;
 }

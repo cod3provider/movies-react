@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FiSearch } from "react-icons/fi";
 
 import MoviesList from '../../components/MoviesList/MoviesList';
-import { FiSearch } from "react-icons/fi";
-// import findIcon from '../../assets/search.svg';
+
+import Container from "../../components/Container/index.js";
 import s from './Movies.module.css';
 
 import {searchMovies} from "../../utils/films.js";
-import Container from "../../components/Container/index.js";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);

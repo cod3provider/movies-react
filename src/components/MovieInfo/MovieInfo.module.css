@@ -1,6 +1,11 @@
 .wrapper {
   margin-top: 25px;
   display: flex;
+  flex-direction: column;
+
+  @media (768px <= width) {
+    flex-direction: row;
+  }
 }
 
 .container {
@@ -8,26 +13,42 @@
   width: 50%;
   flex-direction: column;
   color: #cbd6e0;
+  gap: 12px;
+
+  @media (768px >= width) {
+    margin-top: 50px;
+    width: 100%;
+  }
 }
 
 .pictureThumb {
   margin-right: 25px;
 }
 
-.title {
-  font-size: 32px;
+.title, .infoTitle {
+  font-size: 22px;
+
+  @media (960px <= width) {
+    font-size: 32px;
+  }
+}
+
+.score, .overview, .genres {
+  @media (960px >= width) {
+    font-size: 18px;
+  }
 }
 
 .infoTitle {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
+
+  @media (960px <= width) {
+    font-size: 28px;
+  }
 }
 
 .picture {
   width: 500px;
   border-radius: 15px;
 }
-
-/*p {*/
-/*  margin: 15px 0 0;*/
-/*}*/

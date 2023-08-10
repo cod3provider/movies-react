@@ -27,13 +27,13 @@ const MovieInfo = ({ info }) => {
 
       <div className={s.container}>
         <h1 className={s.title}>{original_title}</h1>
-        <p>User Score: {getVotes()}%</p>
+        <p className={s.score}>User Score: {getVotes()}%</p>
 
         <p className={s.infoTitle}>Overview</p>
-        <p>{overview}</p>
+        <p className={s.overview}>{overview}</p>
 
         <p className={s.infoTitle}>Genres</p>
-        <p>
+        <p className={s.genres}>
           {genres.map(genre => genre.name).join(', ')}
         </p>
       </div>
