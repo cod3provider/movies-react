@@ -1,0 +1,9 @@
+.text {
+    margin-top: 70px;
+    font-size: 22px;
+    color: #cbd6e0;
+
+    @media (960px <= width) {
+        font-size: 32px;
+    }
+}

@@ -1,6 +1,8 @@
+import s from './NotFound.module.css';
+
 const NotFound = () => (
   <div>
-    <p>Page Not Found</p>
+    <p className={s.text}>Page Not Found</p>
   </div>
 )
 
